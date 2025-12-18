@@ -18,7 +18,7 @@ if "active_image" not in st.session_state:
 if "previous_image_option" not in st.session_state:
     st.session_state.previous_image_option = None
 
-image_option = st.radio(label="Choose Image Option below:", 
+image_option = st.radio(label="Select Image Option:", 
                         options=["Upload New Image", "Select Existing Image"], 
                         index=0, horizontal=True)
 
@@ -29,11 +29,11 @@ if st.session_state.previous_image_option != image_option:
 
 if image_option == "Select Existing Image":
     selected_file = st.selectbox(
-        "Select Swimlane from Dropdown",
+        "Select Swimlane Image from Dropdown:",
         options=["data/Aurus_Swimlane.png", 
                 "data/Swimlane_1.png", "data/Swimlane_2.png", "data/Swimlane_3.png"],
         index=None,
-        placeholder="Select image from dropdown",
+        placeholder="Select Image",
     )
     if selected_file is not None:
         st.session_state.active_image_source = "select"
@@ -42,13 +42,13 @@ if image_option == "Select Existing Image":
         image = Image.open(st.session_state.active_image)
         st.image(
             image,
-            caption="Selected Swimlane Diagram",
+            caption="Selected Swimlane Image",
             width='content'
         )
 
 elif image_option == "Upload New Image":
     uploaded_file = st.file_uploader(
-        "Or Upload new swimlane diagram",
+        "Upload New Swimlane Image",
         type=["png", "jpg", "jpeg"]
         )
     if uploaded_file is not None:
@@ -57,12 +57,12 @@ elif image_option == "Upload New Image":
     if st.session_state.active_image_source == "upload":
         st.image(
             st.session_state.active_image,
-            caption="Uploaded Swimlane Diagram",
+            caption="Uploaded Swimlane Image",
             width='content'
         )
 
 model = st.sidebar.selectbox(
-    "Choose model",
+    "Image Model:",
     options=["gpt-4o", "gpt-4.1"],
     index=0
 )
@@ -78,7 +78,7 @@ if st.button("Process Swimlane Image"):
         st.session_state.Swimflow_json = output
 
 chatmodel = st.sidebar.selectbox(
-    "Choose chatmodel",
+    "Chat Model:",
     options=["gpt-4o", "gpt-4.1", "gpt-4.1-mini", "gpt-3.5-turbo", "gpt-3.5-turbo-16k"],
     index=0
 )
