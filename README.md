@@ -92,8 +92,14 @@
 • Chat Models: Handles user queries referencing the parsed JSON.
 
 • Recommended Models:
-    High accuracy: gpt-4o or gpt-4.1
-    Cost-efficient: gpt-3.5-turbo
+
+    Image processing:
+        High accuracy: gpt-4o
+        Cost-efficient: gpt-4.1 (if textual extraction is primary)
+
+    Chat models:
+        High accuracy/reasoning: gpt-4.1, gpt-4o
+        Cost-efficient: gpt-3.5-turbo, gpt-3.5-turbo-16k
 
 
 📊 Accuracy & Performance:
