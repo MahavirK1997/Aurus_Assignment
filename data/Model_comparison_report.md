@@ -38,6 +38,7 @@
     |                | & visual reasoning                | examples                 | prototyping                   |
 
 ✅ Selected: GPT-4o Vision
+
 Rationale: Superior multi-modal reasoning, robust diagram understanding, seamless integration with GPT chat models.
 
 --
@@ -55,65 +56,69 @@ Rationale: Superior multi-modal reasoning, robust diagram understanding, seamles
     |               |                                           | step capabilities         | smaller deployments              |
 
 ✅ Selected: GPT-4o
+
 Rationale: Best alignment with GPT-4o Vision output, high reasoning over structured JSON, minimizes multi-step errors.
 
 ---
 
 5️⃣ Multi-Model Workflow 🔄
 
-User uploads/selects Swimlane image 🖼️
+• User uploads/selects Swimlane image 
 
-GPT-4o Vision encodes image → JSON 🗂️
+• GPT-4o Vision encodes image → JSON 
 
-JSON stored in session state 💾
+•  JSON stored in session state 
 
-User query → GPT-4o → Answer based on JSON 💬
+•  User query → GPT-4o → Answer based on JSON 
 
 Advantages:
 
-Reduced manual diagram parsing ✂️
+• Reduced manual diagram parsing ✂️
 
-High accuracy question answering ✅
+• High accuracy question answering ✅
 
-Flexibility to switch models for cost/performance ⚖️
+• Flexibility to switch models for cost/performance ⚖️
 
 ---
 
 6️⃣ Evaluation Metrics 📊
-Metric	Target
-Image-to-JSON Accuracy	>90% nodes/edges
-Chatbot Correctness	>90% answers
-Response Latency	<5 seconds
-Cost Efficiency	Minimize API usage while maintaining accuracy
+
+    | Metric	             | Target                                        | 
+    | Image-to-JSON Accuracy | >90% nodes/edges                              |
+    | Chatbot Correctness    | >90% answers                                  |
+    | Response Latency       | <5 seconds                                    |
+    | Cost Efficiency	     | Minimize API usage while maintaining accuracy |
 
 ---
 
 7️⃣ References 📚
 
-GPT-4 Vision / GPT-4o – OpenAI (2024), GPT-4 Technical Report
+• GPT-4 Vision / GPT-4o – OpenAI (2024), GPT-4 Technical Report
 
-Gemini Models – Google Research (2024), Gemini AI Multi-modal Capabilities
+• Gemini Models – Google Research (2024), Gemini AI Multi-modal Capabilities
 
-LLaMA-2 – Meta AI (2023), LLaMA-2: Open-Source LLMs
+• LLaMA-2 – Meta AI (2023), LLaMA-2: Open-Source LLMs
 
 ---
 
 8️⃣ Conclusion & Recommendation ✅
 
-Selected Models: GPT-4o Vision (image), GPT-4o (chat)
+• Selected Models: GPT-4o Vision (image), GPT-4o (chat)
 
 Reasons:
 
-Best multi-modal reasoning & JSON extraction
+• Best multi-modal reasoning & JSON extraction
 
-Strong alignment between diagram understanding and chat reasoning
+• Strong alignment between diagram understanding and chat reasoning
 
-Production-ready APIs with high accuracy
+• Production-ready APIs with high accuracy
 
 Next Steps:
 
-Benchmark GPT-4o vs GPT-4.1 on sample Swimlane diagrams
+• Benchmark GPT-4o vs GPT-4.1 on sample Swimlane diagrams
 
-Test LLaMA models for cost-efficient prototyping
+• Test LLaMA models for cost-efficient prototyping
 
-Explore Gemini Vision for multi-cloud deployment or scaling
+• Explore Gemini Vision for multi-cloud deployment or scaling
+
+---
