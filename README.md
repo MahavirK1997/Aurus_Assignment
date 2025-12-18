@@ -90,6 +90,10 @@
     Streamlit Cloud: Add key in Secrets tab of app settings:
         OPENAI_API_KEY = "your_openai_api_key_here"
 
+• Launch on Streamlit:
+    
+    streamlit run src/app.py
+
 ---
 
 🧠 AI Models:
