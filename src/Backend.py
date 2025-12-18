@@ -10,7 +10,7 @@ load_dotenv()
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
 # Initialize client (API key is read from env variable)
-client = OpenAI()
+client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 def encode_image(image):
