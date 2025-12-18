@@ -43,9 +43,9 @@
     | GPT-4o         | $2.50      |	$10.00	  |
     | GPT-4.1	     | $2.00      |	$8.00	  |
 
-    In terms of accuracy for image converting to Json, all models performs equally well and output are almost correct. SO criteria for selection of model is based on latency, cost for image processing. 
+In terms of accuracy for image converting to Json, all models performs equally well and output are almost correct. SO criteria for selection of model is based on latency, cost for image processing. 
 
-    Output for Swimlane_1 image can be found here "data\Swimlane_1_output.txt"
+Output for Swimlane_1 image can be found here data\Swimlane_1_output.txt
 
 ✅ Selected: GPT-4.1 
 

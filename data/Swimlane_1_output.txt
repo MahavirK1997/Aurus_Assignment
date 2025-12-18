@@ -1,4 +1,7 @@
-"GPT-4o" : [
+
+Image : data/Swimlane_1.png
+
+GPT-4o : [
   {"step": 1, "actor": "Customer", "action": "Order is received"},
   {"step": 2, "actor": "Sales", "action": "List all the final order requirements"},
   {"step": 3, "actor": "Credit & Invoicing", "action": "Order is received"},
@@ -31,7 +34,7 @@ GPT-4.1 : [ {"step": 1, "actor": "Customer", "action": "Order is received"},
             {"step": 14, "actor": "Warehouse", "action": "Ship the order"} ]
 
 
-Gemini 2.5 Flash: [
+Gemini 1.5 Pro: [
   {"step": 1, "actor": "CUSTOMER", "action": "Order is received"},
   {"step": 2, "actor": "SALES", "action": "List all the final order requirements"},
   {"step": 3, "actor": "CREDIT & INVOICING", "action": "Order is received"},
