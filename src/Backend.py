@@ -4,11 +4,13 @@ import base64
 from openai import OpenAI
 from langchain_openai import ChatOpenAI
 from langchain.messages import SystemMessage, HumanMessage, AIMessage
+import streamlit as st
 
 load_dotenv() 
 
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+# OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 # Initialize client (API key is read from env variable)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
