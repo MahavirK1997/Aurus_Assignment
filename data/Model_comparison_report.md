@@ -34,14 +34,24 @@
     |                | recognition; Excellent reasoning	 | Limited fine-tuning	    | integrates with GPT chat      |
     | GPT-4.1 Vision | Slightly faster inference; 	     | Experimental on complex  | Good for testing or fallback  |
     |                | Strong reasoning                  | diagrams                 |                               |
-    | Gemini Vision  |	Fast & scalable; Strong OCR 	 | Limited Python/Streamlit | Potential alternative for     |
+    | Gemini 1.5 Pro | Fast & scalable; Strong OCR  	 | Limited Python/Streamlit | Potential alternative for     |
     |                | & visual reasoning                | examples                 | prototyping                   |
 
-✅ Selected: GPT-4o Vision
+    | Model 	     | Input($/M) | Cost($/M) |	
+    | -------------- | ---------- | --------- |  
+    | Gemini 1.5 Pro | $1.25      | $10.00	  |  
+    | GPT-4o         | $2.50      |	$10.00	  |
+    | GPT-4.1	     | $2.00      |	$8.00	  |
 
-Rationale: Superior multi-modal reasoning, robust diagram understanding, seamless integration with GPT chat models.
+    In terms of accuracy for image converting to Json, all models performs equally well and output are almost correct. SO criteria for selection of model is based on latency, cost for image processing. 
 
---
+    Output for Swimlane_1 image can be found here "data\Swimlane_1_output.txt"
+
+✅ Selected: GPT-4.1 
+
+Rationale: Superior multi-modal reasoning, robust diagram understanding, seamless integration with GPT chat models, and cheapest among all other tested models. However, if the latency is the priority, Gemini 1.5 Pro is the win. 
+
+---
 
 4️⃣ Chat Model Comparison 💬
 
@@ -55,9 +65,9 @@ Rationale: Superior multi-modal reasoning, robust diagram understanding, seamles
     | LLaMA-2-7B	| Lightweight; Fast	                        | Weaker reasoning & multi- | Useful for rapid prototyping or  |
     |               |                                           | step capabilities         | smaller deployments              |
 
-✅ Selected: GPT-4o
+✅ Selected: GPT-4.1
 
-Rationale: Best alignment with GPT-4o Vision output, high reasoning over structured JSON, minimizes multi-step errors.
+Rationale: Best alignment with GPT-4.1 Vision output, high reasoning over structured JSON, minimizes multi-step errors. If we want cheaper model, GPT-4.1 Mini is equally good, however there are hallucinations and less reliable than GPT-4.1. 
 
 ---
 
@@ -65,11 +75,11 @@ Rationale: Best alignment with GPT-4o Vision output, high reasoning over structu
 
 • User uploads/selects Swimlane image 
 
-• GPT-4o Vision encodes image → JSON 
+• GPT-4o/ GPT-4.1 Vision encodes image → JSON 
 
-•  JSON stored in session state 
+• JSON stored in session state 
 
-•  User query → GPT-4o → Answer based on JSON 
+• User query → GPT models → Answer based on JSON 
 
 Advantages:
 
@@ -118,11 +128,15 @@ Advantages:
 
     https://venngage.com/blog/swimlane-templates/
 
+• Cost Comparison for GPT models: 
+
+    https://platform.openai.com/docs/pricing
+
 ---
 
 8️⃣ Conclusion & Recommendation ✅
 
-• Selected Models: GPT-4o Vision (image), GPT-4o (chat)
+• Selected Models: GPT-4.1 Vision (image), GPT-4.1 (chat)
 
 Reasons:
 

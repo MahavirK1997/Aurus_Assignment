@@ -1,0 +1,49 @@
+"GPT-4o" : [
+  {"step": 1, "actor": "Customer", "action": "Order is received"},
+  {"step": 2, "actor": "Sales", "action": "List all the final order requirements"},
+  {"step": 3, "actor": "Credit & Invoicing", "action": "Order is received"},
+  {"step": 4, "actor": "Credit & Invoicing", "action": "Perform credit check"},
+  {"step": 5, "condition": "Is there any pending credit?", "yes": 6, "no": 8},
+  {"step": 6, "actor": "Credit & Invoicing", "action": "Credit pending addressed"},
+  {"step": 7, "condition": "Has this been confirmed?", "yes": 9, "no": 6},
+  {"step": 8, "actor": "Sales", "action": "Generate the order"},
+  {"step": 9, "actor": "Credit & Invoicing", "action": "Prepare an invoice"},
+  {"step": 10, "actor": "Credit & Invoicing", "action": "Invoice is sent"},
+  {"step": 11, "actor": "Warehouse", "action": "Order will be generated upon submittal"},
+  {"step": 12, "actor": "Warehouse", "action": "Proceed with packing the order"},
+  {"step": 13, "actor": "Warehouse", "action": "Ship the order"},
+  {"step": 14, "actor": "Sales", "action": "Process and confirm the payment"}
+]
+
+GPT-4.1 : [ {"step": 1, "actor": "Customer", "action": "Order is received"},
+            {"step": 2, "actor": "Sales", "action": "List all the final order requirements"}, 
+            {"step": 3, "actor": "Credit & Invoicing", "action": "Order is received"}, 
+            {"step": 4, "actor": "Credit & Invoicing", "action": "Perform credit check"}, 
+            {"step": 5, "condition": "Is there any pending credit?", "yes": 6, "no": 8}, 
+            {"step": 6, "actor": "Sales", "action": "Credit pending addressed"}, 
+            {"step": 7, "condition": "Has this been confirmed?", "yes": 8, "no": 6}, 
+            {"step": 8, "actor": "Credit & Invoicing", "action": "Prepare an invoice"}, 
+            {"step": 9, "actor": "Credit & Invoicing", "action": "Invoice is sent"}, 
+            {"step": 10, "actor": "Sales", "action": "Process and confirm the payment"}, 
+            {"step": 11, "actor": "Sales", "action": "Generate the order"}, 
+            {"step": 12, "actor": "Warehouse", "action": "Order will be generated upon submittal"}, 
+            {"step": 13, "actor": "Warehouse", "action": "Proceed with packing the order"}, 
+            {"step": 14, "actor": "Warehouse", "action": "Ship the order"} ]
+
+
+Gemini 2.5 Flash: [
+  {"step": 1, "actor": "CUSTOMER", "action": "Order is received"},
+  {"step": 2, "actor": "SALES", "action": "List all the final order requirements"},
+  {"step": 3, "actor": "CREDIT & INVOICING", "action": "Order is received"},
+  {"step": 4, "actor": "WAREHOUSE", "action": "Order will be generated upon submittal"},
+  {"step": 5, "actor": "CREDIT & INVOICING", "action": "Perform credit check"},
+  {"step": 6, "condition": "Is there any pending credit?", "yes": "Credit pending addressed", "no": "Has this been confirmed?"},
+  {"step": 7, "actor": "SALES", "action": "Credit pending addressed"},
+  {"step": 8, "condition": "Has this been confirmed?", "yes": "Prepare an invoice", "no": "Generate the order"},
+  {"step": 9, "actor": "SALES", "action": "Generate the order"},
+  {"step": 10, "actor": "CUSTOMER", "action": "Process and confirm the payment"},
+  {"step": 11, "actor": "CREDIT & INVOICING", "action": "Prepare an invoice"},
+  {"step": 12, "actor": "CREDIT & INVOICING", "action": "Invoice is sent"},
+  {"step": 13, "actor": "WAREHOUSE", "action": "Proceed with packing the order"},
+  {"step": 14, "actor": "WAREHOUSE", "action": "Ship the order"}
+]
