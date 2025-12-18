@@ -75,8 +75,6 @@ if st.button("Process Swimlane Image"):
         if st.session_state.active_image_source == "upload" or st.session_state.active_image_source == "select":
             encoded_image = encode_image(st.session_state.active_image)
         output = convert_swimlane_to_json(encoded_image, model)
-        st.subheader("LLM output for Swimlane to json:")
-        #st.success(output)
         st.session_state.Swimflow_json = output
 
 chatmodel = st.sidebar.selectbox(
@@ -92,7 +90,10 @@ with st.sidebar:
         st.rerun()
 
 if st.session_state.Swimflow_json is not None:
+    st.title("LLM output for Swimlane to json:")
     st.write(st.session_state.Swimflow_json)
+    st.subheader("ChatBot:")
+
 user_input = st.chat_input('Type here')
 
 if len(st.session_state["Chat_History"])>0:
