@@ -1,147 +1,107 @@
-wimBot: Model Comparison and Selection Report
-1. Project Overview
+🟦  SwimBot: Model Comparison & Selection Report
 
-Objective:
-Build a chatbot that accurately answers client questions using Swimlane diagrams and other structured/unstructured process documentation. The system should:
+1️⃣ Project Overview
 
-Extract workflow information from uploaded or existing Swimlane images.
+• Objective: Build a chatbot that can:
 
-Convert images to a structured JSON representation.
+• Extract workflows from Swimlane diagrams 
 
-Enable a conversational interface over the JSON data.
+• Convert diagrams into structured JSON 
 
-Maintain high accuracy (target >90%) and quick response times.
+• Answer user questions based on JSON context 
 
-2. Components Requiring Model Selection
+• Achieve >90% accuracy with low response latency
 
-Image-to-JSON Conversion (Computer Vision + LLM)
+---
 
-Input: Swimlane diagram (PNG, JPG, JPEG)
+2️⃣ Components Requiring Model Selection:
 
-Output: JSON representation of workflow nodes, actions, and transitions
+    | Component	       | Input	                           | Output                                         |
+    | ---------------- | --------------------------------- | ---------------------------------------------- |
+    | Image-to-JSON	   | Swimlane diagram (PNG, JPG, JPEG) | Structured JSON of nodes, actions, transitions |
+    | Chat Model (LLM) |User question + Swimlane JSON	   | Context-aware answers                          |
 
-Chat Model (LLM)
 
-Input: User question + Swimlane JSON
+---
 
-Output: Context-aware answers
+3️⃣ Image Model Comparison 🖼️
+Model	Strengths ✅	Weaknesses ⚠️	Notes 📝
+GPT-4o Vision	High accuracy in layout & text recognition; Excellent reasoning	High API cost; Limited fine-tuning	Best for production; directly integrates with GPT chat
+GPT-4.1 Vision	Slightly faster inference; Strong reasoning	Experimental on complex diagrams	Good for testing or fallback
+Gemini Vision	Fast & scalable; Strong OCR & visual reasoning	Limited Python/Streamlit examples	Potential alternative for prototyping
 
-3. Image Model Comparison
-Model	Architecture	Strengths	Weaknesses	Notes for Swimlane Project
-OpenAI GPT-4o Vision	Multi-modal GPT (Vision + Text)	- Handles complex diagrams
-- High accuracy in text + layout recognition
-- Integrates directly with LLM	- Commercial API cost
-- Limited fine-tuning	Selected for production use due to strong multi-modal capabilities and integration with GPT chat models
-OpenAI GPT-4.1 Vision	Multi-modal GPT	- Slightly faster inference
-- Strong reasoning over visual data	- Still experimental on structured diagrams	Useful for testing, but GPT-4o provided slightly higher diagram extraction fidelity in pilot runs
-Google Gemini Vision	Multi-modal, foundation model	- Fast and scalable
-- Strong OCR and visual reasoning	- Limited documentation/examples for structured workflows	Potential alternative, but integration with Python/Streamlit pipelines less mature
-BLIP-2 (HuggingFace)	Image captioning & understanding	- Open-source
-- Good OCR + text extraction	- Needs custom prompt engineering
-- Limited reasoning over multi-node diagrams	Can be used for proof-of-concept or fine-tuning for specific Swimlane layouts
-Tesseract OCR	Traditional OCR	- Free, lightweight
-- Simple text extraction	- Cannot capture node relationships or layout	Only for extracting raw text; not suitable for full workflow JSON conversion
+✅ Selected: GPT-4o Vision
+Rationale: Superior multi-modal reasoning, robust diagram understanding, seamless integration with GPT chat models.
 
-✅ Selected Image Model: GPT-4o Vision
-Rationale: Strong multi-modal reasoning, robust layout understanding, smooth integration with GPT-4 chat models. Pilot tests showed higher fidelity in identifying nodes and edges in complex Swimlane diagrams.
+--
 
-4. Chat Model Comparison
-Model	Architecture	Strengths	Weaknesses	Notes for Swimlane Project
-GPT-4o	Multi-modal, reasoning-optimized LLM	- Strong reasoning over structured JSON
-- Handles long context well	- Higher latency & cost	Default for main chatbot responses; compatible with GPT-4o Vision output
-GPT-4.1	Advanced GPT-4 variant	- Slightly faster
-- High accuracy	- May underperform GPT-4o in multi-step reasoning	Used for comparison, fallback option
-GPT-4.1-mini	Smaller variant	- Low latency
-- Lower cost	- Reduced reasoning & memory	Can be used for fast prototyping or low-cost deployment
-GPT-3.5-turbo / 3.5-turbo-16k	Earlier GPT generation	- Cost-efficient
-- 16k context can handle mid-sized diagrams	- Weak in multi-step reasoning
-- Less precise in understanding complex flows	Considered only for testing or scenarios with cost constraints
+4️⃣ Chat Model Comparison 💬
+Model	Strengths ✅	Weaknesses ⚠️	Notes 📝
+GPT-4o	Excellent reasoning over structured JSON; Handles multi-step queries	High latency & cost	Default choice for high accuracy
+GPT-4.1	Slightly faster; High accuracy	Slightly weaker reasoning	Fallback option
+LLaMA-2-13B	Open-source; Cost-efficient	Less reasoning & context handling	Good for prototyping or low-cost deployment
+LLaMA-2-7B	Lightweight; Fast	Weaker reasoning & multi-step capabilities	Useful for rapid prototyping or smaller deployments
 
-✅ Selected Chat Model: GPT-4o
-Rationale: Best reasoning over structured JSON and complex workflows, aligns with image model selection. Minimizes errors in multi-step query answering.
+✅ Selected: GPT-4o
+Rationale: Best alignment with GPT-4o Vision output, high reasoning over structured JSON, minimizes multi-step errors.
 
-5. Multi-Model Integration
+---
 
-Workflow:
+5️⃣ Multi-Model Workflow 🔄
 
-User uploads/selects a Swimlane image.
+User uploads/selects Swimlane image 🖼️
 
-GPT-4o Vision encodes the image into a structured JSON format.
+GPT-4o Vision encodes image → JSON 🗂️
 
-JSON is stored in session state.
+JSON stored in session state 💾
 
-User queries are sent to GPT-4o, which reasons over the JSON context and provides precise answers.
+User query → GPT-4o → Answer based on JSON 💬
 
 Advantages:
 
-Reduced human intervention in diagram parsing.
+Reduced manual diagram parsing ✂️
 
-High accuracy in question answering due to structured intermediate representation.
+High accuracy question answering ✅
 
-Ability to switch chat models for cost/performance trade-offs.
+Flexibility to switch models for cost/performance ⚖️
 
-6. Evaluation Metrics and Criteria
+---
 
-Image-to-JSON Accuracy
+6️⃣ Evaluation Metrics 📊
+Metric	Target
+Image-to-JSON Accuracy	>90% nodes/edges
+Chatbot Correctness	>90% answers
+Response Latency	<5 seconds
+Cost Efficiency	Minimize API usage while maintaining accuracy
 
-Compare extracted JSON nodes/edges vs. ground truth.
+---
 
-Target: >90% node and edge accuracy.
+7️⃣ References 📚
 
-Chatbot Performance
+GPT-4 Vision / GPT-4o – OpenAI (2024), GPT-4 Technical Report
 
-Correct answer rate vs. test question set.
+Gemini Models – Google Research (2024), Gemini AI Multi-modal Capabilities
 
-Target: >90% correctness.
+LLaMA-2 – Meta AI (2023), LLaMA-2: Open-Source LLMs
 
-Response Latency
+---
 
-Measure end-to-end time (image -> JSON -> answer).
-
-Target: <5 seconds for typical diagrams.
-
-Cost Efficiency
-
-Compare API calls for GPT-4o vs alternatives for projected usage.
-
-7. References and Supporting Research
-
-GPT-4 Vision / GPT-4o
-
-OpenAI (2024). “GPT-4 Technical Report” OpenAI Research
-
-Multi-modal reasoning in diagrams and documents.
-
-Gemini Models
-
-Google Research (2024). “Gemini AI: Multi-modal Capabilities” Google Research
-
-BLIP-2
-
-Li et al. (2023). “BLIP-2: Bootstrapped Language-Image Pretraining” arXiv:2301.12597
-
-Tesseract OCR
-
-Smith, R. (2007). “An Overview of the Tesseract OCR Engine” Document Analysis Systems
-
-8. Conclusion and Recommendation
+8️⃣ Conclusion & Recommendation ✅
 
 Selected Models: GPT-4o Vision (image), GPT-4o (chat)
 
 Reasons:
 
-Superior multi-modal reasoning and structured JSON extraction.
+Best multi-modal reasoning & JSON extraction
 
-Strong alignment between image understanding and question answering.
+Strong alignment between diagram understanding and chat reasoning
 
-Supported by recent research and production-ready APIs.
-
-Alternative Models: GPT-4.1, Gemini Vision, BLIP-2 can be explored for cost reduction, prototyping, or multi-cloud deployment.
+Production-ready APIs with high accuracy
 
 Next Steps:
 
-Run quantitative evaluation on a benchmark dataset of Swimlane diagrams.
+Benchmark GPT-4o vs GPT-4.1 on sample Swimlane diagrams
 
-Compare GPT-4o vs. GPT-4.1 in real user queries.
+Test LLaMA models for cost-efficient prototyping
 
-Explore BLIP-2 as an open-source alternative if API costs become prohibitive.
+Explore Gemini Vision for multi-cloud deployment or scaling
