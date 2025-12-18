@@ -1,6 +1,7 @@
 🟦 SwimBot
 
 • SwimBotSwimBot is a Domain-specific chatbot for processing and querying Swimlane diagrams from a development portal.
+
 • SwimBot converts swimlane diagrams into structured JSON and answers client questions about workflows using AI models.
 
 
@@ -30,6 +31,7 @@
 ⚙️ Model Options:
 
 • Image models: gpt-4o, gpt-4.1
+
 • Chat models: gpt-4o, gpt-4.1, gpt-4.1-mini, gpt-3.5-turbo, gpt-3.5-turbo-16k
 
 🔑 Environment Configuration:
@@ -40,16 +42,21 @@
 🚀 How It Works
 
 1️⃣ Upload / Select Image:
+
 • Upload a new swimlane diagram or select an existing one.
 
 2️⃣ Process Diagram:
+
 • Click Process Swimlane Image to convert it into structured JSON.
 
-3️⃣ Ask Questions
+3️⃣ Ask Questions:
+
 • Interact with the chatbot to query workflow events.
+
 • Chat history is displayed in the sidebar.
 
-4️⃣ Clear Session
+4️⃣ Clear Session:
+
 • Reset chat and workflow results anytime using the Clear Session button.
 
 
@@ -81,7 +88,9 @@
 🧠 AI Models:
 
 • Image Processing: Converts swimlane diagrams to structured JSON.
+
 • Chat Models: Handles user queries referencing the parsed JSON.
+
 • Recommended Models:
     High accuracy: gpt-4o or gpt-4.1
     Cost-efficient: gpt-3.5-turbo
@@ -90,13 +99,16 @@
 📊 Accuracy & Performance:
 
 • Target: ≥ 90% accuracy in parsing workflow events.
+
 • Conversational AI provides structured responses referencing parsed workflow data.
 
 
 ❗ Notes:
 
 • Ensure .env is not committed to GitHub (add it to .gitignore).
+
 • Streamlit Cloud requires API keys in secrets.toml.
+
 • App works locally and on the cloud seamlessly.
 
 
