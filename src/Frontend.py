@@ -90,7 +90,7 @@ with st.sidebar:
         st.rerun()
 
 if st.session_state.Swimflow_json is not None:
-    st.title("LLM output for Swimlane to json:")
+    st.subheader("Swimlane to Json:")
     st.write(st.session_state.Swimflow_json)
     st.subheader("ChatBot:")
 
