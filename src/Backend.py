@@ -10,7 +10,7 @@ load_dotenv()
 
 # OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 
-OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"].strip()
 # Initialize client (API key is read from env variable)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
