@@ -1,5 +1,7 @@
 🟦  SwimBot: Model Comparison & Selection Report
 
+ ---
+
 1️⃣ Project Overview
 
 • Objective: Build a chatbot that can:
@@ -29,7 +31,7 @@
     | Model	         | Strengths ✅                      | Weaknesses ⚠️	          | Notes 📝                     |
     | -------------- | --------------------------------- | ------------------------ | ----------------------------- |
     | GPT-4o Vision	 | High accuracy in layout & text    | High API cost;           | Best for production; directly |
-                    | recognition; Excellent reasoning	 | Limited fine-tuning	    | integrates with GPT chat      |
+    |                | recognition; Excellent reasoning	 | Limited fine-tuning	    | integrates with GPT chat      |
     | GPT-4.1 Vision | Slightly faster inference; 	     | Experimental on complex  | Good for testing or fallback  |
     |                | Strong reasoning                  | diagrams                 |                               |
     | Gemini Vision  |	Fast & scalable; Strong OCR 	 | Limited Python/Streamlit | Potential alternative for     |
@@ -41,11 +43,16 @@ Rationale: Superior multi-modal reasoning, robust diagram understanding, seamles
 --
 
 4️⃣ Chat Model Comparison 💬
-Model	Strengths ✅	Weaknesses ⚠️	Notes 📝
-GPT-4o	Excellent reasoning over structured JSON; Handles multi-step queries	High latency & cost	Default choice for high accuracy
-GPT-4.1	Slightly faster; High accuracy	Slightly weaker reasoning	Fallback option
-LLaMA-2-13B	Open-source; Cost-efficient	Less reasoning & context handling	Good for prototyping or low-cost deployment
-LLaMA-2-7B	Lightweight; Fast	Weaker reasoning & multi-step capabilities	Useful for rapid prototyping or smaller deployments
+
+    | Model	        | Strengths ✅                             | Weaknesses ⚠️             | Notes 📝                         |
+    | ------------- | ----------------------------------------- | ------------------------- | -------------------------------- |
+    | GPT-4o	    | Excellent reasoning over structured JSON; | High latency & cost       | Default choice for high accuracy |
+    |               | Handles multi-step queries                |                           |                                  |
+    | GPT-4.1	    | Slightly faster; High accuracy	        | Slightly weaker reasoning | Fallback option                  |
+    | LLaMA-2-13B	| Open-source; Cost-efficient	            | Less reasoning & context 	| Good for prototyping or low-cost |
+    |               |                                           | handling                  | deployment                       |
+    | LLaMA-2-7B	| Lightweight; Fast	                        | Weaker reasoning & multi- | Useful for rapid prototyping or  |
+    |               |                                           | step capabilities         | smaller deployments              |
 
 ✅ Selected: GPT-4o
 Rationale: Best alignment with GPT-4o Vision output, high reasoning over structured JSON, minimizes multi-step errors.
