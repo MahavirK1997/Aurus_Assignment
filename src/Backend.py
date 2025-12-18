@@ -13,11 +13,11 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 # Initialize client (API key is read from env variable)
 client = OpenAI(api_key=OPENAI_API_KEY)
 
-
+# Encoding the image before sending to the model
 def encode_image(image):
     if hasattr(image, "read"):  # uploaded file
         return base64.b64encode(image.read()).decode("utf-8")
-    else:  # file path
+    else:  # selected file path
         with open(image, "rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
         
@@ -66,6 +66,7 @@ def convert_swimlane_to_json(encoded_image: str, model):
 
     return response.choices[0].message.content
 
+# Chat node for conversational bot
 def chat_node(user_input, chatmodel, swimlane_json, chat_history):
     llm = ChatOpenAI(model_name=chatmodel)
     messages = []
@@ -79,6 +80,7 @@ def chat_node(user_input, chatmodel, swimlane_json, chat_history):
             )
         )
     )
+    # Saving the chat history for future conversation 
     if chat_history is not None:
         for conv in chat_history:
             messages.append(HumanMessage(content=conv["user_input"]))
