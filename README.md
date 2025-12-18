@@ -1,6 +1,6 @@
 🟦 SwimBot
 
-• SwimBotSwimBot is a Domain-specific chatbot for processing and querying Swimlane diagrams from a development portal.
+• SwimBot is a Domain-specific chatbot for processing and querying Swimlane diagrams from a development portal.
 
 • SwimBot converts swimlane diagrams into structured JSON and answers client questions about workflows using AI models.
 
