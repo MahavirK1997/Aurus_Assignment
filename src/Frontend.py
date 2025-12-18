@@ -7,6 +7,15 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+if "OPENAI_API_KEY" in st.secrets:
+    api_key = st.secrets["OPENAI_API_KEY"]
+    st.success("OpenAI API key found!")
+    
+    # **Optionally show part of it, but never show full key for security**
+    st.write(f"Key preview: {api_key[:5]}****{api_key[-5:]}")
+else:
+    st.error("OpenAI API key not found in secrets.")
+
 if "Chat_History" not in st.session_state:
     st.session_state.Chat_History = [] 
 if "Swimflow_json" not in st.session_state:
