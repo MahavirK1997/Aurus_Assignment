@@ -112,6 +112,10 @@
         High accuracy/reasoning: gpt-4.1, gpt-4o
         Cost-efficient: gpt-3.5-turbo, gpt-3.5-turbo-16k
 
+• Model Comparison report: Detailed Model comparison report can be accssed here
+
+    https://github.com/MahavirK1997/Aurus_Assignment/blob/main/data/Model_comparison_report.md
+
 ---
 
 📊 Accuracy & Performance:
