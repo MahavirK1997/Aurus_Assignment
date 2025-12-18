@@ -4,15 +4,19 @@
 
 • SwimBot converts swimlane diagrams into structured JSON and answers client questions about workflows using AI models.
 
+---
 
 🌐 Access the App:
 
     https://swimbot.streamlit.app/
 
+---
+
 📌 Background
 
 • SwimBot was developed as part of a assessment for a Development Portal chatbot. 
 
+---
 
 🛠️ Features
 
@@ -38,6 +42,7 @@
 
 • Supports .env files locally or Streamlit Cloud secrets.toml for OpenAI API key management.
 
+---
 
 🚀 How It Works
 
@@ -59,6 +64,7 @@
 
 • Reset chat and workflow results anytime using the Clear Session button.
 
+---
 
 ⚙️ Installation
 
@@ -84,6 +90,7 @@
     Streamlit Cloud: Add key in Secrets tab of app settings:
         OPENAI_API_KEY = "your_openai_api_key_here"
 
+---
 
 🧠 AI Models:
 
@@ -101,6 +108,7 @@
         High accuracy/reasoning: gpt-4.1, gpt-4o
         Cost-efficient: gpt-3.5-turbo, gpt-3.5-turbo-16k
 
+---
 
 📊 Accuracy & Performance:
 
@@ -108,6 +116,7 @@
 
 • Conversational AI provides structured responses referencing parsed workflow data.
 
+---
 
 ❗ Notes:
 
@@ -117,5 +126,6 @@
 
 • App works locally and on the cloud seamlessly.
 
+---
 
 ✅ SwimBot simplifies complex workflow diagrams and empowers users to query them intelligently using AI.
