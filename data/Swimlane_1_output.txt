@@ -1,5 +1,5 @@
 
-Image : data/Swimlane_1.png
+Image : https://github.com/MahavirK1997/Aurus_Assignment/blob/main/data/Swimlane_1.png
 
 GPT-4o : [
   {"step": 1, "actor": "Customer", "action": "Order is received"},

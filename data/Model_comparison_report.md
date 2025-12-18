@@ -45,7 +45,7 @@
 
 In terms of accuracy for image converting to Json, all models performs equally well and output are almost correct. SO criteria for selection of model is based on latency, cost for image processing. 
 
-Output for Swimlane_1 image can be found here data\Swimlane_1_output.txt
+Output for Swimlane_1 image can be found here https://github.com/MahavirK1997/Aurus_Assignment/blob/main/data/Swimlane_1_output.txt
 
 ✅ Selected: GPT-4.1 
 
