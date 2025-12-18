@@ -24,11 +24,16 @@
 
 ---
 
-3️⃣ Image Model Comparison 🖼️
-Model	Strengths ✅	Weaknesses ⚠️	Notes 📝
-GPT-4o Vision	High accuracy in layout & text recognition; Excellent reasoning	High API cost; Limited fine-tuning	Best for production; directly integrates with GPT chat
-GPT-4.1 Vision	Slightly faster inference; Strong reasoning	Experimental on complex diagrams	Good for testing or fallback
-Gemini Vision	Fast & scalable; Strong OCR & visual reasoning	Limited Python/Streamlit examples	Potential alternative for prototyping
+3️⃣ Image Model Comparison:
+
+    | Model	         | Strengths ✅                      | Weaknesses ⚠️	          | Notes 📝                     |
+    | -------------- | --------------------------------- | ------------------------ | ----------------------------- |
+    | GPT-4o Vision	 | High accuracy in layout & text    | High API cost;           | Best for production; directly |
+                    | recognition; Excellent reasoning	 | Limited fine-tuning	    | integrates with GPT chat      |
+    | GPT-4.1 Vision | Slightly faster inference; 	     | Experimental on complex  | Good for testing or fallback  |
+    |                | Strong reasoning                  | diagrams                 |                               |
+    | Gemini Vision  |	Fast & scalable; Strong OCR 	 | Limited Python/Streamlit | Potential alternative for     |
+    |                | & visual reasoning                | examples                 | prototyping                   |
 
 ✅ Selected: GPT-4o Vision
 Rationale: Superior multi-modal reasoning, robust diagram understanding, seamless integration with GPT chat models.
