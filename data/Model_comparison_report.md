@@ -73,11 +73,11 @@ Rationale: Best alignment with GPT-4o Vision output, high reasoning over structu
 
 Advantages:
 
-• Reduced manual diagram parsing ✂️
+• Reduced manual diagram parsing
 
-• High accuracy question answering ✅
+• High accuracy question answering
 
-• Flexibility to switch models for cost/performance ⚖️
+• Flexibility to switch models for cost/performance
 
 ---
 
@@ -93,11 +93,29 @@ Advantages:
 
 7️⃣ References 📚
 
-• GPT-4 Vision / GPT-4o – OpenAI (2024), GPT-4 Technical Report
+• GPT-4 Vision / GPT-4o – OpenAI (2024), GPT-4 Technical Report : 
 
-• Gemini Models – Google Research (2024), Gemini AI Multi-modal Capabilities
+    https://openai.com/contributions/gpt-4v/
+    https://arxiv.org/abs/2303.08774
 
-• LLaMA-2 – Meta AI (2023), LLaMA-2: Open-Source LLMs
+• Gemini Models – Google Research (2024), Gemini AI Multi-modal Capabilities : 
+
+    https://en.wikipedia.org/wiki/Gemini_%28language_model%29
+
+• LLaMA-2 – Meta AI (2023), LLaMA-2: Open-Source LLMs : 
+
+    https://ai.meta.com/research/publications/llama-2-open-foundation-and-fine-tuned-chat-models/
+
+• Comparative analysis of LLMs, GPT-4 vs Gemini: 
+    https://share.google/Bj9Z0K9TJrzCkI7qX
+
+• LangChain Documentation (Docs) — Developer documentation and guides: 
+
+    https://docs.langchain.com/
+
+• Swimlane Diagram Templates (Venngage) — Examples and templates for swimlane diagrams: 
+
+    https://venngage.com/blog/swimlane-templates/
 
 ---
 
