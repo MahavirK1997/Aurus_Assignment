@@ -3,6 +3,7 @@
 venv/
 ENV/
 env/
+.env/
 
 # Python cache
 __pycache__/
@@ -22,4 +23,4 @@ Thumbs.db
 *.tmp
 *.zip
 *.tar
-*.gz
+*.gzcd
